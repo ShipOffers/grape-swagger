@@ -197,7 +197,7 @@ module Grape
                 paramType = if path.include?(":#{param}")
                    'path'
                 else
-                  %w[ POST PUT PATCH ].include?(method) ? 'form' : 'query'
+                  %w[ POST PUT PATCH ].include?(method) ? 'body' : 'query'
                 end
                 name        = (value.is_a?(Hash) && value[:full_name]) || param
 
